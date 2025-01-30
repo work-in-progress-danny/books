@@ -1,4 +1,13 @@
 {
-  "name": "books",
-  "packageManager": "yarn@4.5.0"
+	"name": "site",
+	"packageManager": "yarn@4.5.0",
+	"workspaces": {
+		"packages": [
+			"books",
+			"functions"
+		]
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
 }
