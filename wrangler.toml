@@ -1,5 +1,6 @@
-name = "books functions"
-compatibility_date = "2025-01-24"
+name = "books"
+compatibility_date = "2025-01-30"
+pages_build_output_dir = "./dist"
 
 [observability]
 enabled = true
