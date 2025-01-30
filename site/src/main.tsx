@@ -1,10 +1,12 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import "./index.css"
-import App from "./App.tsx"
+import { IndexPage } from "./pages/index/IndexPage.tsx"
 
+import "./index.css"
+
+// biome-ignore lint: no-null-assertion
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
-		<App />
+		<IndexPage />
 	</StrictMode>,
 )

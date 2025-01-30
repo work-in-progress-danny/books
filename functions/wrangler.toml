@@ -1,0 +1,10 @@
+name = "books functions"
+compatibility_date = "2025-01-24"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "books-db"
+database_id = "a430cbfc-5696-4b8b-ab11-7732ce9451da"

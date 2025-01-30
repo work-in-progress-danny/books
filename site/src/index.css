@@ -1,73 +1,47 @@
+@import "tailwindcss";
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary: #FFF2D0;
+  --secondary: #19191A;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-body: 'IBM Plex Mono', monospace;
+  --font-chomsky: 'Chomsky', sans-serif;
+  --font-chomsky: 'Chomsky', sans-serif;
 }
 
-a:hover {
-  color: #535bf2;
-}
-
+html,
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  & * {
+    @apply text-secondary dark:text-primary;
+    @apply font-body;
+    @apply border-secondary dark:border-primary;
   }
 
-  a:hover {
-    color: #747bff;
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-chomsky;
   }
 
-  button {
-    background-color: #f9f9f9;
+  @apply bg-primary dark:bg-secondary;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
   }
+}
+
+@font-face {
+  font-family: 'Chomsky';
+  src:
+    url('/fonts/Chomsky.woff2') format('woff2'),
+    url('/fonts/Chomsky.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
